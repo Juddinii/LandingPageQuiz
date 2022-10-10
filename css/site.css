@@ -1,28 +1,130 @@
 :root {
-    --cf-dark: #212121;
+    --cf-dark: #1f1d1d;
     --cf-light: #ebebeb;
     --cf-darkblue: #00223d;
     --cf-highlight: #fae100;
+    font-family: 'Racing Sans One', cursive;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 
 html,
+
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-image: url("/img/LandingPage_1920.png");
-    background-position: top right;
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin-top: 4rem;
 }
 
 .footer {
-    flex-shrink: 0;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 24px;
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+  }
+
+
+.mainHeader {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: var(--cf-light-color);
+  }
+  .mainHeader-wrapper {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+.bgImage {
+    background: url(/img/LandingPage_1920.png), var(--cf-darkblue);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:local;
+  }
+
+.btn-outline-primary {
+  color: var(--cf-dark-color);
+  border-color: var(--cf-secondary-color) !important;
 }
+.mainTitle {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    color: var(--cf-dark-color);
+    text-transform: uppercase;
+    }
+    .subTitle {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+    color: var(--cf-dark-color);
+    text-transform: uppercase;
+    }
+/* X-Small devices (portrait phones, less than 576px)*/
+/* No media query for `xs` since this is the default in Bootstrap*/
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .mainHeader{
+      background-image: url(/img/LandingPage_576.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up)*/
+  @media (min-width: 768px)  and (orientation: portrait;){
+    .mainHeader {
+      background-image: url(/img/LandingPage_768.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+    }
+    
+  }
+  
+  /* Large devices (desktops, 992px and up)*/
+  @media (min-width: 992px) {
+    .mainHeader {
+      background-image: url(/img/LandingPage_992.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+    }
+  }
+  
+  /* X-Large devices (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {
+    .mainHeader {
+      background-image: url(/img/Land.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+    }
+  .titleText{
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    color: rgb(201, 201, 35);
+    font-weight: 400;
+  }
+
+  .h1{ 
+    font-family: 'Racing Sans One';
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
